@@ -1,3 +1,3 @@
-[![Oraș Digital](https://static.oras.digital/app.logo/1/oras-digital-200.png)][1]
+[![Oraș Digital](https://raw.githubusercontent.com/innovator-dev/oras-digital/master/assets/oras-digital-cover.jpg)][1]
 
 [1]: https://oras.digital
