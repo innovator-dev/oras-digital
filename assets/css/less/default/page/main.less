@@ -1,0 +1,57 @@
+/*
+ * Oraș Digital - Connecting the City
+ * - A Innovator Dev project.
+ *
+ * @link https://oras.digital
+ * @link https://innovator.dev
+ * @copyright © 2022 Innovator Dev. All rights reserved.
+ */
+
+// Main
+main {
+  flex-grow: 1;
+  margin: 3em auto 5em;
+
+  // Paragraphs
+  p {
+    margin: 1em 0 0;
+
+    &:nth-of-type(1) {
+      margin: 0;
+    }
+  }
+
+  // Heading level #1
+  h1 {
+    display: block;
+    font-size: 2.5em;
+    margin: 0 auto .35em;
+    text-align: center;
+
+    @media (min-width: @mediaQueryMedium) {
+      text-align: left;
+    }
+
+    // Labeled
+    &.labeled {
+      position: relative;
+
+      &:before {
+        content: attr(data-label);
+        font-size: .25em;
+        position: absolute;
+        top: -25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: var(--theme-9);
+        padding: .4em .7em;
+      }
+    }
+  }
+
+  // Handling level #2
+  h2 {
+    font-size: 1.5em;
+    margin: 1.5em auto .5em;
+  }
+}

@@ -1,0 +1,144 @@
+/*
+ * Static web project skeleton
+ *
+ * @author Innovator Dev <hello@innovator.dev>
+ * @license MIT
+ */
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+:invalid {
+  box-shadow: none; /* FF */
+  outline: 0; /* IE 10 */
+}
+
+// Custom scrollBar
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background: var(--theme-7);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: var(--color-light);
+}
+
+html {
+  scroll-behavior: smooth;
+
+  @media (orientation: portrait) {
+    height: 100%;
+  }
+
+  @media (orientation: landscape) and (min-device-width: 768px) {
+    height: 100%;
+  }
+}
+
+body {
+  background: var(--background-color) url('@{S3}bg.svg') no-repeat top center;
+  background-size: cover;
+
+  font: 400 16px/1.6 'Barlow', Georgia, Arial, sans-serif;
+  color: var(--text-color);
+  text-rendering: optimizeLegibility;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .01);
+
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  min-height: 100%;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--text-color);
+    outline: 0;
+  }
+
+  &:active {
+    outline: 0;
+  }
+
+  &:not(.btn):not(.na) {
+    border-bottom: 3px solid transparent;
+    display: inline;
+
+    &:hover {
+      color: var(--anchor-color-hover);
+      outline: 0;
+
+      border-bottom-color: var(--anchor-border-color-hover);
+    }
+  }
+}
+
+h1, h2, h3, h4 {
+  line-height: 1;
+}
+
+h1, h2, h3, h4,
+input, button, label, textarea {
+  font-family: 'Barlow', Georgia, Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+// Headings
+h1 {
+  font-size: 1.84em;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.22em;
+}
+
+h4 {
+  font-size: 1.06em;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+picture {
+  display: block;
+  position: relative;
+}
+
+input, button, label, textarea {
+  font-family: 'Barlow', Arial, sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
