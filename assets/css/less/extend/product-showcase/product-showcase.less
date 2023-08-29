@@ -1,0 +1,82 @@
+/*
+ * Oraș Digital - Connecting the City
+ * - A Innovator Dev project.
+ *
+ * @link https://oras.digital
+ * @link https://innovator.dev
+ * @copyright © 2022 Innovator Dev. All rights reserved.
+ */
+
+.product-showcase {
+  position: relative;
+  background-color: var(--theme-2);
+  color: var(--text-color);
+  border-top: 1px solid var(--theme-2);
+
+  padding: 2.5em 0;
+  margin: 2em auto 0;
+  min-height: 380px;
+
+  @media (min-width: @mediaQueryLarge) {
+    min-height: 460px;
+  }
+
+  @media (min-width: @mediaQueryExtraLarge) {
+    min-height: 430px;
+  }
+
+  // Product story
+  .product-story {
+    display: flex;
+    flex-flow: column nowrap;
+
+    h2 {
+      margin: 0 auto .75em;
+
+      font-size: 2em;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .75);
+      text-align: center;
+
+      @media (min-width: @mediaQueryMedium) {
+        margin: 0 0 .75em;
+        text-align: left;
+      }
+    }
+  }
+
+  // Product image
+  .product-image {
+    background-image: var(--product-image);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    height: 300px;
+
+    @media (min-width: @mediaQueryLarge) {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      background-position: left center;
+      height: 460px;
+    }
+
+    @media (min-width: @mediaQueryExtraLarge) {
+      height: 430px;
+    }
+
+    /*&:before {
+      position: absolute;
+      content: '';
+
+      top: 0;
+      left: 68px;
+      transform: skew(-17.35deg);
+
+      background-color: var(--secondary);
+      width: 6px;
+      height: 100%;
+    }*/
+  }
+}
