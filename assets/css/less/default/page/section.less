@@ -11,7 +11,6 @@ section {
 
   // Grid section
   &.grid {
-    position: relative;
     display: flex;
     flex-flow: column-reverse nowrap;
     align-items: flex-start;
@@ -44,22 +43,32 @@ section {
       }
     }
 
+    &.grid-5-7 {
+      & > div {
+
+        &:nth-child(1) {
+          .grid;
+          margin-top: 2.5em;
+
+          @media (min-width: @mediaQueryMedium) {
+            .grid(5.5);
+            margin-top: 0;
+          }
+        }
+
+        &:nth-child(2) {
+          .grid;
+
+          @media (min-width: @mediaQueryMedium) {
+            .grid(6.5);
+          }
+        }
+      }
+    }
+
     // Handling images
     img {
       .grid;
-    }
-
-    // Handling lists
-    ul {
-      margin: .5em 1.4em 1em;
-      list-style: disc;
-
-      li {
-        &::marker {
-          color: var(--theme-3);
-          font-size: 1.2em;
-        }
-      }
     }
   }
 }

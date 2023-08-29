@@ -10,7 +10,12 @@
 // Main
 main {
   flex-grow: 1;
-  margin: 3em auto 5em;
+  padding: 3em 0;
+  // margin: 3em auto 5em;
+
+  @media (min-width: @mediaQueryMedium) {
+    padding: 3em 0 1em;
+  }
 
   // Paragraphs
   p {
@@ -24,8 +29,8 @@ main {
   // Heading level #1
   h1 {
     display: block;
-    font-size: 2.5em;
-    margin: 0 auto .35em;
+    font-size: 2.6em;
+    margin: 0 auto .5em;
     text-align: center;
 
     @media (min-width: @mediaQueryMedium) {
@@ -35,23 +40,41 @@ main {
     // Labeled
     &.labeled {
       position: relative;
+      display: inline-block;
 
       &:before {
-        content: attr(data-label);
-        font-size: .25em;
         position: absolute;
+        content: attr(data-label);
         top: -25px;
+
+        font-size: .25em;
         text-transform: uppercase;
         letter-spacing: 1px;
+
         background: var(--theme-9);
-        padding: .4em .7em;
+        padding: .4em .75em;
       }
     }
   }
 
   // Handling level #2
-  h2 {
-    font-size: 1.5em;
-    margin: 1.5em auto .5em;
+  h3 {
+    font-size: 1.35em;
+    margin: 1.75em auto .75em;
+  }
+
+  // Lists
+  ul {
+    margin: .5em 1.25em 1em;
+    list-style: disc;
+
+    li {
+      padding-left: .25em;
+
+      &::marker {
+        color: var(--theme-3);
+        font-size: 1.3em;
+      }
+    }
   }
 }

@@ -12,16 +12,15 @@ header {
   padding: 2em 0 1em;
 
   @media (min-width: @mediaQueryMedium) {
-    padding: 3em 0 2em;
+    padding: 3em 0 1em;
   }
 
   // Container
   .container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    display: table;
 
     @media (min-width: @mediaQuerySmall) {
+      display: flex;
       flex-flow: row nowrap;
       justify-content: flex-start;
     }
@@ -33,7 +32,7 @@ header {
       align-items: center;
 
       & > img {
-        width: 170px;
+        width: 150px;
         height: auto;
         margin-right: 1.5em;
         padding-right: 1.5em;
@@ -44,7 +43,8 @@ header {
       & > span {
         display: inline-block;
         text-align: left;
-        line-height: 1.4;
+        line-height: 1.25;
+        font-size: 1.25em;
 
         & > span {
           display: block;
