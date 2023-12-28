@@ -47,12 +47,11 @@ html {
 }
 
 body {
-  background: var(--background-color) /*url('@{S3}bg.svg') no-repeat top center*/;
-  background-size: cover;
+  background: var(--background-color) url('@{S3}bg.svg') repeat center;
   background-attachment: fixed;
 
   font: 400 16px/1.6 'Barlow', Georgia, Arial, sans-serif;
-  color: var(--text-color-dark);
+  color: var(--text-color);
   text-rendering: optimizeLegibility;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .01);
 
@@ -63,11 +62,11 @@ body {
 }
 
 a {
-  color: var(--text-color-dark);
+  color: var(--text-color);
   text-decoration: none;
 
   &:hover {
-    color: var(--text-color-dark);
+    color: var(--text-color);
     outline: 0;
   }
 
@@ -76,7 +75,7 @@ a {
   }
 
   &:not(.btn):not(.na) {
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
     display: inline;
 
     &:hover {
